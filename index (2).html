@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matematik Özel Ders | Başarıya Giden Yol</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-indigo-500 selection:text-white">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-indigo-200">
+                    <i class="fa-solid fa-square-root-variable"></i>
+                </div>
+                <span class="text-xl font-extrabold tracking-tight text-slate-900">Matematik<span class="text-indigo-600">Pro</span></span>
+            </div>
+            
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-slate-600">
+                <a href="#hakkimda" class="hover:text-indigo-600 transition">Hakkımda</a>
+                <a href="#hizmetler" class="hover:text-indigo-600 transition">Seviyeler</a>
+                <a href="#fiyatlar" class="hover:text-indigo-600 transition">Paketler & Fiyatlar</a>
+                <a href="#yorumlar" class="hover:text-indigo-600 transition">Öğrenci Yorumları</a>
+                <a href="#iletisim" class="hover:text-indigo-600 transition">İletişim</a>
+            </nav>
+
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="#randevu" class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2.5 rounded-xl font-semibold shadow-md shadow-indigo-200 transition transform hover:-translate-y-0.5">
+                    Ücretsiz Tanıtım Dersi
+                </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button id="menu-btn" class="md:hidden text-slate-600 hover:text-slate-900 focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#hakkimda" class="block py-2 text-slate-600 font-medium">Hakkımda</a>
+            <a href="#hizmetler" class="block py-2 text-slate-600 font-medium">Seviyeler</a>
+            <a href="#fiyatlar" class="block py-2 text-slate-600 font-medium">Paketler & Fiyatlar</a>
+            <a href="#yorumlar" class="block py-2 text-slate-600 font-medium">Öğrenci Yorumları</a>
+            <a href="#iletisim" class="block py-2 text-slate-600 font-medium">İletişim</a>
+            <div class="pt-2">
+                <a href="#randevu" class="block text-center bg-indigo-600 text-white py-3 rounded-xl font-semibold">Ücretsiz Tanıtım Dersi</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden py-20 lg:py-32 bg-gradient-to-b from-indigo-50/50 via-white to-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-indigo-50 border border-indigo-100 px-4 py-2 rounded-full text-indigo-700 text-sm font-semibold">
+                        <i class="fa-solid fa-award"></i>
+                        <span>10+ Yıl Deneyim & %98 Başarı Oranı</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                        Matematik Artık Bir <span class="text-indigo-600 underline decoration-indigo-300 decoration-wavy">Kabus Değil</span>, Başarı Hikayeniz Olsun!
+                    </h1>
+                    <p class="text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0">
+                        LGS, YKS (TYT-AYT), okul takviye ve universite matematik derslerinde kişiye özel stratejilerle eksiklerinizi kapatıyor, hedeflediğiniz puanlara ulaştırıyoruz.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#randevu" class="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-4 rounded-xl shadow-lg shadow-indigo-200 transition transform hover:-translate-y-0.5 text-center">
+                            Hemen Randevu Al <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#hizmetler" class="w-full sm:w-auto bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 font-semibold px-8 py-4 rounded-xl transition text-center">
+                            Programları İncele
+                        </a>
+                    </div>
+                    <!-- Trust Badges -->
+                    <div class="pt-8 border-t border-slate-200 grid grid-cols-3 gap-4 text-center lg:text-left">
+                        <div>
+                            <div class="text-2xl lg:text-3xl font-extrabold text-slate-900">500+</div>
+                            <div class="text-sm text-slate-500 font-medium">Mutlu Öğrenci</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl lg:text-3xl font-extrabold text-slate-900">Binlerce</div>
+                            <div class="text-sm text-slate-500 font-medium">Çözülen Soru</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl lg:text-3xl font-extrabold text-slate-900">4.9/5.0</div>
+                            <div class="text-sm text-slate-500 font-medium">Öğrenci Puanı</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hero Image / Visual Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-3xl blur-xl opacity-25 animate-pulse"></div>
+                    <div class="relative bg-white rounded-3xl border border-slate-200 p-8 shadow-2xl">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center space-x-3">
+                                <img src="https://placehold.co/100x100/6366f1/ffffff?text=Hoca" alt="Eğitmen" class="w-14 h-14 rounded-full object-cover border-2 border-indigo-600">
+                                <div>
+                                    <h3 class="font-bold text-slate-900">Ahmet Yılmaz</h3>
+                                    <p class="text-xs text-indigo-600 font-semibold">Uzman Matematik Eğitmeni</p>
+                                </div>
+                            </div>
+                            <span class="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full">Aktif Eğitmen</span>
+                        </div>
+                        <div class="space-y-4 text-sm text-slate-600">
+                            <div class="flex items-center justify-between p-3 bg-slate-50 rounded-xl">
+                                <span class="font-medium text-slate-700">YKS Başarı Oranı</span>
+                                <span class="font-bold text-indigo-600">%95 İlk 20 Bin</span>
+                            </div>
+                            <div class="flex items-center justify-between p-3 bg-slate-50 rounded-xl">
+                                <span class="font-medium text-slate-700">Ders Formatı</span>
+                                <span class="font-bold text-slate-900">Yüzyüze & Online</span>
+                            </div>
+                            <div class="flex items-center justify-between p-3 bg-slate-50 rounded-xl">
+                                <span class="font-medium text-slate-700">Deneme Takibi</span>
+                                <span class="font-bold text-slate-900">Özel Koçluk Dahil</span>
+                            </div>
+                        </div>
+                        <div class="mt-6 p-4 bg-indigo-50 rounded-2xl border border-indigo-100 text-center">
+                            <p class="text-xs font-medium text-indigo-800">✨ "Matematik ezberlenmez, mantığı kavranır."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="hakkimda" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://placehold.co/600x450/e0e7ff/4f46e5?text=Ders+Ortami" alt="Matematik Dersi Ortamı" class="rounded-3xl shadow-xl w-full object-cover">
+                </div>
+                <div class="space-y-6">
+                    <div class="inline-block bg-indigo-50 text-indigo-600 text-sm font-bold px-4 py-1.5 rounded-full">
+                        Neden Ben?
+                    </div>
+                    <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">
+                        Öğrencinin Seviyesine Uygun, Sonuç Odaklı Eğitim Modeli
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        Her öğrencinin öğrenme hızı ve kavrama biçimi farklıdır. Klasik sınıf ortamlarında kaybolan öğrenciler için kişiye özel analizler yaparak, eksik olunan temel konuları sıfırdan inşa ediyoruz.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="flex items-start space-x-3 p-4 bg-slate-50 rounded-2xl">
+                            <div class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold flex-shrink-0">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Kişiselleştirilmiş Program</h4>
+                                <p class="text-xs text-slate-500 mt-1">Öğrencinin eksiklerine göre özel ödev ve soru havuzu.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3 p-4 bg-slate-50 rounded-2xl">
+                            <div class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold flex-shrink-0">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Pratik Formüller & Taktikler</h4>
+                                <p class="text-xs text-slate-500 mt-1">Sınavlarda zaman kazandıran pratik çözüm yolları.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services & Levels Section -->
+    <section id="hizmetler" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <div class="inline-block bg-indigo-50 text-indigo-600 text-sm font-bold px-4 py-1.5 rounded-full">
+                    Eğitim Alanları
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                    Hangi Seviyelerde Ders Veriyorum?
+                </h2>
+                <p class="text-slate-600">İlkokul temelinden üniversite hazırlık aşamasına kadar her yaş grubuna özel programlar.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Level 1 -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-2xl font-bold mb-6">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">LGS Matematik</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            8. sınıf öğrencilerinin yeni nesil soru tiplerinde ustalaşmasını, mantıksal akıl yürütme becerilerini geliştirerek LGS'de tam başarı yakalamasını sağlıyoruz.
+                        </p>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-700 border-t border-slate-100 pt-4">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-indigo-600 mr-2"></i> Yeni Nesil Soru Çözümleri</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-indigo-600 mr-2"></i> Haftalık Deneme Analizi</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-indigo-600 mr-2"></i> Motivasyon & Zaman Yönetimi</li>
+                    </ul>
+                </div>
+
+                <!-- Level 2 -->
+                <div class="bg-white p-8 rounded-3xl border-2 border-indigo-600 shadow-xl relative flex flex-col justify-between transform md:-translate-y-2">
+                    <span class="absolute -top-3.5 right-6 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">En Çok Tercih Edilen</span>
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-indigo-600 text-white flex items-center justify-center text-2xl font-bold mb-6 shadow-lg shadow-indigo-200">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">YKS (TYT - AYT)</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Üniversite sınavına hazırlananlar için sıfırdan zirveye eksiksiz konu anlatımı, soru bankası taramaları ve çıkmış soru analizleri ile hedef bölüme kapı aralayın.
+                        </p>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-700 border-t border-slate-100 pt-4">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-indigo-600 mr-2"></i> TYT & AYT Kapsamlı Tarama</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-indigo-600 mr-2"></i> Soru Çözüm Taktikleri</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-indigo-600 mr-2"></i> Birebir Ödev Takibi</li>
+                    </ul>
+                </div>
+
+                <!-- Level 3 -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-2xl font-bold mb-6">
+                            <i class="fa-solid fa-school"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Okul Takviye & Ara Sınıf</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            9, 10 ve 11. sınıf öğrencilerinin okul notlarını yükseltmek, yazılı sınavlarına kusursuz hazırlanmak ve temel matematik açıklarını kapatmak için ideal program.
+                        </p>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-700 border-t border-slate-100 pt-4">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-indigo-600 mr-2"></i> Yazılı Sınavına Hazırlık</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-indigo-600 mr-2"></i> Temel Kavram Güçlendirme</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-indigo-600 mr-2"></i> Ödev Yardımı</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing & Package Calculator -->
+    <section id="fiyatlar" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <div class="inline-block bg-indigo-50 text-indigo-600 text-sm font-bold px-4 py-1.5 rounded-full">
+                    Ücretlendirme
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                    Esnek Paketler ve Şeffaf Fiyatlar
+                </h2>
+                <p class="text-slate-600">İhtiyacınıza uygun ders paketini seçin veya aylık planınızı oluşturun.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <!-- Package 1 -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 text-center space-y-6">
+                    <h3 class="text-xl font-bold text-slate-900">Tek Ders / Deneme</h3>
+                    <div class="text-4xl font-extrabold text-indigo-600"> 750₺ <span class="text-sm font-medium text-slate-500">/ saat</span></div>
+                    <p class="text-sm text-slate-600">Acil soru çözümleri ve tekil eksik konuları kapatmak için birebir seans.</p>
+                    <ul class="space-y-3 text-sm text-slate-700 text-left">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-indigo-600 mr-2"></i> 60 Dakika Ders Süresi</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-indigo-600 mr-2"></i> Konu Anlatımı & Soru Çözümü</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-slate-300 mr-2 line-through"></i> Sınırsız Soru Desteği</li>
+                    </ul>
+                    <a href="#randevu" class="block w-full bg-slate-200 hover:bg-slate-300 text-slate-800 font-semibold py-3 rounded-xl transition">Seç</a>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="bg-indigo-900 text-white p-8 rounded-3xl shadow-2xl relative space-y-6 transform md:-translate-y-4">
+                    <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-indigo-500 text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">En Popüler Paket</span>
+                    <h3 class="text-xl font-bold">Aylık Paket (16 Saat)</h3>
+                    <div class="text-4xl font-extrabold text-indigo-300"> 10.000₺ <span class="text-sm font-medium text-slate-300">/ ay</span></div>
+                    <p class="text-sm text-slate-300">Haftada 4 saat düzenli ders ile hedeflerinize emin adımlarla ilerleyin.</p>
+                    <ul class="space-y-3 text-sm text-slate-200 text-left">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-indigo-400 mr-2"></i> 16 Saat Birebir Özel Ders</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-indigo-400 mr-2"></i> WhatsApp Üzerinden Soru Sorma</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-indigo-400 mr-2"></i> Aylık Performans Raporu</li>
+                    </ul>
+                    <a href="#randevu" class="block w-full bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 rounded-xl shadow-lg transition">Hemen Başvur</a>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 text-center space-y-6">
+                    <h3 class="text-xl font-bold text-slate-900">YKS Sınav Sezonu Paketi</h3>
+                    <div class="text-4xl font-extrabold text-indigo-600"> 28.000₺ <span class="text-sm font-medium text-slate-500">/ 3 ay</span></div>
+                    <p class="text-sm text-slate-600">Sınava kadar tüm eksikleri bitiren, koçluk dahil tam kapsamlı program.</p>
+                    <ul class="space-y-3 text-sm text-slate-700 text-left">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-indigo-600 mr-2"></i> 50 Saat Kapsamlı Ders</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-indigo-600 mr-2"></i> Kişisel Eğitim Koçluğu</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-indigo-600 mr-2"></i> Haftalık Deneme Analizleri</li>
+                    </ul>
+                    <a href="#randevu" class="block w-full bg-slate-200 hover:bg-slate-300 text-slate-800 font-semibold py-3 rounded-xl transition">Seç</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="yorumlar" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <div class="inline-block bg-indigo-50 text-indigo-600 text-sm font-bold px-4 py-1.5 rounded-full">
+                    Başarı Hikayeleri
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                    Öğrencilerim Ne Diyor?
+                </h2>
+                <p class="text-slate-600">Sınavlarda derece yapan ve matematiği seven öğrencilerimin deneyimleri.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+                    <div class="flex items-center space-x-1 text-amber-400">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 text-sm italic">
+                        "LGS'de matematik netlerim çok düşüktü. Ahmet Hoca ile 4 ay çalıştıktan sonra matematikte sadece 1 yanlış yaptım ve hayalimdeki liseye yerleştim. Kesinlikle tavsiye ederim!"
+                    </p>
+                    <div class="pt-4 border-t border-slate-100 flex items-center space-x-3">
+                        <img src="https://placehold.co/50x50/e0e7ff/4f46e5?text=Z.K" alt="Öğrenci" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-sm text-slate-900">Zeynep Kaya</h4>
+                            <p class="text-xs text-slate-500">LGS Öğrencisi (Kabataş Lisesi)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+                    <div class="flex items-center space-x-1 text-amber-400">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 text-sm italic">
+                        "AYT matematik konularını bir türlü oturtamıyordum. Formülleri ezberlemek yerine mantığını öğreten harika bir hoca. Sayesinde ilk 5 bine girdim!"
+                    </p>
+                    <div class="pt-4 border-t border-slate-100 flex items-center space-x-3">
+                        <img src="https://placehold.co/50x50/e0e7ff/4f46e5?text=M.D" alt="Öğrenci" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-sm text-slate-900">Mert Demir</h4>
+                            <p class="text-xs text-slate-500">YKS Öğrencisi (İTÜ Bilgisayar Müh.)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+                    <div class="flex items-center space-x-1 text-amber-400">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 text-sm italic">
+                        "Okul sınavlarından sürekli zayıf alıyordum. Ders anlatım tarzı o kadar anlaşılır ve sabırlı ki, artık matematik dersini sabırsızlıkla bekliyorum. Teşekkürler hocam!"
+                    </p>
+                    <div class="pt-4 border-t border-slate-100 flex items-center space-x-3">
+                        <img src="https://placehold.co/50x50/e0e7ff/4f46e5?text=E.S" alt="Öğrenci" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-sm text-slate-900">Elif Şahin</h4>
+                            <p class="text-xs text-slate-500">10. Sınıf Öğrencisi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking & Contact Form Section -->
+    <section id="randevu" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="inline-block bg-indigo-50 text-indigo-600 text-sm font-bold px-4 py-1.5 rounded-full">
+                        İletişim & Randevu
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                        Ücretsiz Tanıtım Dersi İçin Formu Doldurun
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        Öğrencinin seviyesini belirlemek ve çalışma planı oluşturmak için 20 dakikalık ücretsiz online ön görüşme ve tanışma dersi planlayalım.
+                    </p>
+                    <div class="space-y-4 text-slate-700">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 font-medium">Telefon & WhatsApp</p>
+                                <p class="font-bold text-slate-900">+90 (555) 123 45 67</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 font-medium">E-posta Adresi</p>
+                                <p class="font-bold text-slate-900">bilgi@matematikpro.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 font-medium">Konum</p>
+                                <p class="font-bold text-slate-900">Kadıköy / İstanbul (Yüzyüze) & Tüm Türkiye (Online)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Box -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 shadow-lg">
+                    <form id="booking-form" onsubmit="handleBooking(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-1">Öğrenci veya Veli Adı Soyadı</label>
+                            <input type="text" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white text-slate-800" placeholder="Örn: Ahmet Demir">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-1">Telefon Numarası</label>
+                            <input type="tel" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white text-slate-800" placeholder="05XX XXX XX XX">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-1">Öğrencinin Sınıfı / Hedefi</label>
+                            <select class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white text-slate-800">
+                                <option>LGS Hazırlık (8. Sınıf)</option>
+                                <option>YKS - TYT / AYT (11. ve 12. Sınıf / Mezun)</option>
+                                <option>Ara Sınıf Okul Takviye (9. veya 10. Sınıf)</option>
+                                <option>İlkokul / Ortaokul Temel Takviye</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-1">Ders Tercihi</label>
+                            <select class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white text-slate-800">
+                                <option>Online Ders (Zoom / Google Meet)</option>
+                                <option>Yüzyüze Ders (Öğrenci Evi / Ofis)</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-4 rounded-xl shadow-lg shadow-indigo-200 transition">
+                            Randevu Talebi Gönder
+                        </button>
+                    </form>
+                    <!-- Success Message Box -->
+                    <div id="success-box" class="hidden mt-4 p-4 bg-green-50 border border-green-200 text-green-700 rounded-xl text-center font-medium">
+                        🎉 Randevu talebiniz başarıyla alındı! En kısa sürede sizinle iletişime geçeceğiz.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center text-white font-bold text-xl">
+                    <i class="fa-solid fa-square-root-variable"></i>
+                </div>
+                <span class="text-xl font-extrabold tracking-tight text-white">Matematik<span class="text-indigo-400">Pro</span></span>
+            </div>
+            <p class="text-sm text-slate-400 text-center md:text-left">
+                © 2026 MatematikPro Özel Ders. Tüm hakları saklıdır.
+            </p>
+            <div class="flex space-x-4 text-slate-400 text-xl">
+                <a href="#" class="hover:text-indigo-400 transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-indigo-400 transition"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#" class="hover:text-indigo-400 transition"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interaction Logic -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Booking Form Submission Simulation
+        function handleBooking(event) {
+            event.preventDefault();
+            const successBox = document.getElementById('success-box');
+            successBox.classList.remove('hidden');
+            document.getElementById('booking-form').reset();
+            setTimeout(() => {
+                successBox.classList.add('hidden');
+            }, 6000);
+        }
+    </script>
+</body>
+</html>
